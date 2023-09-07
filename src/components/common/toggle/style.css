@@ -1,0 +1,10 @@
+.toggle{
+    background-color: rgb(250, 161, 161);
+    padding:  5px 20px;
+}
+.buttonDiv{
+    text-align: center;
+}
+.buttonDiv button{
+    margin: 10px;
+}

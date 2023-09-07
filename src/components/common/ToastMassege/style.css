@@ -1,0 +1,5 @@
+.Toastify__toast-theme--light {
+    background: green !important;
+    color: #ffffff;
+    padding: 20px;
+}

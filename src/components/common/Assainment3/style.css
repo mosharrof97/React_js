@@ -1,0 +1,45 @@
+.main{
+    display: flex;
+    justify-content: center;
+}
+.formMain{
+    background-color: #424242;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+    width: 25%;
+}
+.form{
+    text-align: start;
+    padding: 30px 20px;
+    color: white;
+}
+.inputDiv{
+    display: flex;
+    flex-direction: column;
+    font-size: 20px;
+    font-weight: 600;
+}
+.tablediv{
+    margin: 10px;
+}
+.tabledataChild{
+    margin: 10px 0px;
+    padding: 25px 18px;
+    background-color: #282828;
+    border-radius: 5px;
+}
+.tododata h2{
+    color: #ff6c00;
+    font-size: 20px;
+    font-weight: 800;
+}
+.tododata p{
+    color: white;
+    font-size: 16px;
+    margin: 0;
+}
+.errorMsg{
+    height: 16px;
+    margin-bottom: 10px;
+}

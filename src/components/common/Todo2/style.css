@@ -1,0 +1,14 @@
+.todoTable{
+    padding: 5px;
+}
+.todoTablechild{
+    padding: 5px;
+    width: 500px;
+    background-color: rgb(172, 172, 172);
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid;
+}
+.formDiv{
+    margin:  10px 0px;
+}

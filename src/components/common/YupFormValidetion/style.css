@@ -1,0 +1,18 @@
+.fromControl{
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+}
+.inputDiv{
+    padding: 0px 
+}
+label{
+    margin-right: 10px;
+}
+.errorMsg{
+    height: 20px;
+}
+span{
+    color: red;
+    font-style: italic;
+}
