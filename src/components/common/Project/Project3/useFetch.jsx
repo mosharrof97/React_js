@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 
 const useFetch = (url ) => {
     const [datas, setDatas] = useState(null) 
+    const [storeddatas, setStoredDatas] = useState(null) ;
     const [isLodding, setIsLodding] = useState(true) 
     const [errors, setErrors] = useState(null) 
 
@@ -17,6 +18,7 @@ const useFetch = (url ) => {
         })
         .then((data)=>{
             setDatas(data)
+            setStoredDatas(data)
             setIsLodding(false)
             setErrors(null)
         })
@@ -26,8 +28,7 @@ const useFetch = (url ) => {
         })
     }, [url])
 
-    
-        return {datas, isLodding, errors}
+        return {datas, isLodding, errors, setDatas, storeddatas}
    
 }
 export default useFetch 

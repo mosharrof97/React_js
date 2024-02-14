@@ -4,30 +4,32 @@ import Form from './Form'
 
 const Project = () => {
 
-    const { datas, isLodding, errors } = useFetch(
+    const { datas, isLodding, errors, setDatas , storeddatas} = useFetch(
         "https://jsonplaceholder.typicode.com/users"
     )
-    const [filteredData, setfilteredData] = useState(datas)
+    // const [filteredData, setfilteredData] = useState(datas)
 
 
 
     const removedata = (id) => {
-        console.log(datas)
-        const filter = filteredData.filter(
+ 
+        const filter = datas.filter(
             (data) => data.id !== id
         );
 
-        setfilteredData(filter);
+        setDatas(filter);
     }
-    // const hendlesearch = (search)=>{
-    //     const value= search.toLowerCase()
-    //     const Filtervalue = datas.filter((data)=>{
-    //         const Newdata = datas.name.toLowerCase()
-    //         return Newdata.startsWith(value);
-    //     })
-    //     setfilteredData(Filtervalue)
+    const hendlesearch = (search)=>{
+        // console.log(datas)
+        // console.log(storeddatas)
+        const searchKey= search.toLowerCase()
+        const Filtervalue = storeddatas.filter((data)=>{
+            const name = data.name.toLowerCase()
+            return name.startsWith(searchKey);
+        })
+        setDatas(Filtervalue)
 
-    // }
+    }
 
     const isloddings = <p>Lodding....</p>
     const errorMessage = <p>{errors}</p>
@@ -35,7 +37,7 @@ const Project = () => {
 
     return (
         <div className='container-fluid'>
-
+                < Form hendlesearch={hendlesearch} />
             <div className='row m-3'>
                 {isLodding && isloddings}
                 {errors && errorMessage}

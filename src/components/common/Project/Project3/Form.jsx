@@ -2,13 +2,19 @@ import React, { useEffect, useState } from 'react'
 
 const Form = (props) => {
 
-  const [searchdata, setSearchdata] = useState()
-  const hendleChange= (event)=>{
-    setSearchdata(event.target.value)
+//   const [searchdata, setSearchdata] = useState()
+//   const hendleChange= (event)=>{
+//     setSearchdata(event.target.value)
+//   }
+// useEffect(()=>{
+//   props.hendlesearch(searchdata)
+// })
+
+function hendleChange(e){
+    const searchKey = e.target.value;
+    props.hendlesearch(searchKey) 
   }
-useEffect(()=>{
-  props.hendlesearch(searchdata)
-})
+
   return (
     <div className='container-fluid'>
         <div className='row d-flex justify-content-center'>
